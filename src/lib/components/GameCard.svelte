@@ -1,5 +1,5 @@
 <div>
-    <div class="w-[80%] bg-white p-4 shadow hover:big-shadow">Hello</div>
+    <div class="w-[80%] bg-white p-4 shadow hover:big-shadow"></div>
     <div class="shadow bg-white hover:big-shadow">
         <div class="relative w-full aspect-1 bg-contain overflow-hidden p-4">
             <img class="shadow" src="/games/shooter.jpg" alt="" />
