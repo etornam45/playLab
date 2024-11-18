@@ -2,6 +2,12 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+body{
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+
+    box-sizing: border-box;
+}
 
 @layer components {
     .max-container{ 
@@ -26,6 +32,10 @@
 
     .text-shadow {
         text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.504);
+    }
+
+    .big-text-shadow {
+        text-shadow: 10px 10px 0px rgba(0, 0, 0, 0.504);
     }
 }
 
