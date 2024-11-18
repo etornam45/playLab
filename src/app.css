@@ -1,0 +1,45 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+@layer components {
+    .max-container{ 
+        @apply max-w-7xl mx-auto px-4;
+    }
+
+    .shadow{
+        box-shadow: 3px 3px 0 0px #000000 !important;
+    }
+
+    .big-shadow{
+        box-shadow: 10px 10px 0 0px #000000 !important;
+    }
+
+    .breathe {
+        animation: breathe 4s infinite ease-in-out;
+    }
+
+    .still {
+        animation: still 4s infinite ease-in-out;
+    }
+
+    .text-shadow {
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.504);
+    }
+}
+
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes still {
+    0%, 100% {
+        transform: scale(1);
+    }
+}
