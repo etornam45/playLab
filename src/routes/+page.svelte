@@ -1,81 +1,45 @@
 <script>
-    import GameCard from "$lib/components/GameCard.svelte";
-
+    import HeroSection from "$lib/components/HeroSection.svelte";
+    import MostPopularSection from "$lib/components/MostPopularSection.svelte";
 </script>
-<main class="h-[10000px] bg-yellow-500 grid-view">
+
+<main class=" bg-yellow-500 grid-view pb-[100px]">
     <header
-        class="sticky top-2 flex w-full justify-between items-center max-container p-2 shadow text-xl z-10 bg-yellow-400/50 backdrop-blur-md"
+        class="sticky top-2 flex w-full justify-between items-center max-container p-2 shadow text-xl z-10 bg-yellow-400/50 backdrop-blur-md backdrop-saturate-[10]"
     >
         <h1 class="font-black ml-4 text-[#68FF04] text-shadow">PlayLab</h1>
 
         <nav
-            class="flex gap-4 text-xl font-extrabold text-[blueviolet] text-shadow"
+            class="flex gap-4 text-xl font-extrabold text-[blueviolet]"
         >
-            <a href="#">All Games</a>
-            <a href="#">New Games</a>
-            <a href="#">Action</a>
-            <a href="#">Adventure</a>
-            <a href="#">Sports</a>
+            <a class="hover:scale-[1.1]" href="#">All Games</a>
+            <a class="hover:scale-[1.1]" href="#">New Games</a>
+            <a class="hover:scale-[1.1]" href="#">Action</a>
+            <a class="hover:scale-[1.1]" href="#">Adventure</a>
+            <a class="hover:scale-[1.1]" href="#">Sports</a>
         </nav>
 
         <form>
-            <input class="p-2 shadow" type="text" placeholder="Search" />
-            <button class="p-2 px-4 bg-green-400 shadow">Search</button>
+            <input class="p-2 shadow" type="text" placeholder="Search here" />
+            <button class="p-2 px-4 bg-[#68FF04] shadow">Search</button>
         </form>
     </header>
 
-    <section class="relative min-h-screen w-full">
-        <div
-            class="hero_art absolute w-[1000px] h-[700px] bg-cover bg-no-repeat top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
-            style="background-image: url('/Hero_Art.png');"
-        >
-            <img
-                class="absolute still top-0 left-0 translate-x-[-50%] translate-y-[-50%] w-full h-full"
-                src="/Hero_Art.png"
-                alt=""
-            />
+    <HeroSection />
+
+    <MostPopularSection />
+
+    <section class="max-container mt-[100px]">
+        <div>
+            <a href="https://www.google.com" class="text-9xl font-mono font-black text-shadow hover:big-text-shadow cursor-alias hover:text-[#68FF04]">Play your favourite game at anytime</a>
+            <p
+                class="text-4xl  mt-8"
+            >
+                Subscribe to play your favourite games at anytime. <br> No need to <span class="bg-[#bc04ff] shadow px-2 text-white hover:big-shadow cursor-pointer">download</span> or install. Just join, play and enjoy.
+            </p>
+            <button class="bg-[#68FF04] p-4 px-8 mt-28 text-2xl font-bold text-shadow hover:big-shadow shadow">Subscribe Now</button>
+            
         </div>
-        <img
-            class="absolute breathe top-[20%] left-[50px] hover:left-[100px] translate-x-[-50%] translate-y-[-50%]"
-            src="/Console_ill.png"
-            alt=""
-            width="150"
-        />
-        <img
-            class="absolute top-[20%] right-0 hover:right-[20px] translate-x-[-50%] translate-y-[-50%] breathe"
-            src="/football.png"
-            alt=""
-            width="150"
-        />
-        <img
-            class="absolute top-[80%] left-[0px] hover:left-[50px] translate-x-[-50%] translate-y-[-50%]"
-            src="/VR_ill.png"
-            alt=""
-            width="200"
-        />
-        <img
-            class="absolute top-[80%] right-0 hover:right-[20px] translate-x-[-50%] translate-y-[-50%]"
-            src="/Knife_ill.png"
-            alt=""
-            width="150"
-        />
-    </section>
-
-    <section class="max-container">
-        <h2 class="p-4 px-6 text-2xl font-black bg-white w-max shadow">Most Popular Games</h2>
-
-        <div class="grid grid-cols-3 gap-8 mt-[100px]">
-            <GameCard />
-            <GameCard />
-            <GameCard />
-            <GameCard />
-            <GameCard />
-            <GameCard />
-        </div>
-    </section>
-
-    <section>
-        
     </section>
 </main>
 
@@ -95,21 +59,5 @@
                 var(--color) var(--width),
                 transparent var(--width)
             );
-    }
-
-    .hero_art {
-        background-image: url("/Hero_Art.png");
-        background-size: contain !important;
-    }
-
-    .hero_art::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: inherit;
-        filter: blur(100px) saturate(5);
-        z-index: -10;
     }
 </style>
